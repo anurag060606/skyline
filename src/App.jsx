@@ -50,17 +50,19 @@ function App() {
         </div>
       </div>
 
-      <p style={{ fontSize: `min(3vw,18px)`, color: `#696984`, textAlign: `center` }}>Trusted by 5,000+ Companies Worldwide</p>
-      <div className="logos">
-        <img src={gooGle} />
-        <img src={netFlix} />
-        <img src={airBnb} />
-        <img src={amaZon} />
-        <img src={faceBook} />
-        <img src={grAb} />
+      <div className="companies-section">
+        <p style={{ fontSize: `min(3vw,18px)`, color: `#696984`, textAlign: `center` }}>Trusted by 5,000+ Companies Worldwide</p>
+        <div className="logos">
+          <img src={gooGle} />
+          <img src={netFlix} />
+          <img src={airBnb} />
+          <img src={amaZon} />
+          <img src={faceBook} />
+          <img src={grAb} />
+        </div>
       </div>
 
-      <p style={{ color: `#F48C06`, fontSize: `min(3.2vw,24px)`, fontWeight: `bold`, textAlign: `center`, paddingTop: `5vw`, margin: `1.5vw auto` }}>
+      <p style={{ color: `#F48C06`, fontSize: `min(3.2vw,24px)`, fontWeight: `bold`, textAlign: `center`, paddingTop: `3rem`, margin: `1.5vw auto` }}>
         <span style={{ color: `#2F327D` }}>All-In-One</span> Cloud Software
       </p>
       <p style={{ color: `#696984`, fontSize: `min(2.6vw,1.2rem)`, width: `45vw`, margin: `0 auto`, textAlign: 'center' }}>
@@ -81,11 +83,11 @@ function App() {
         <Card className="customer"
           img = {custOmer}
           title="Customer Tracking"
-          desc="Automate and track emails to individuals or groups. Skilline’s built-in system helps organize your organization "
+          desc="Automate and track emails to individuals or groups. Skilline's built-in system helps organize your organization "
         />
       </div>
 
-      <p style={{ color: `#F48C06`, fontSize: `min(3.2vw,24px)`, fontWeight: `bold`, textAlign: `center`, paddingTop: `5vw`, margin: `1.5vw auto` }}>
+      <p style={{ color: `#F48C06`, fontSize: `min(3.2vw,24px)`, fontWeight: `bold`, textAlign: `center`, paddingTop: `3rem`, margin: `1.5vw auto` }}>
         <span style={{ color: `#2F327D` }}>What is</span> Skilline?
       </p>
       <p style={{ color: `#696984`, fontSize: `min(2.4vw,1.2rem)`, width: `45vw`, margin: `0 auto`, textAlign: 'center' }}>
@@ -106,7 +108,7 @@ function App() {
       <div className="classroom">
         <div>
           <p style={{ color: `#2F327D`, fontWeight: `500` }}>Everything you can do in a physical classroom,<span style={{ color: `#F48C06`, }}> you can do with Skilline</span></p>
-          <p style={{ color: `#696984`, fontSize: `min(2vw,1rem)`, margin: `0 auto`, textAlign: `left` }}>Skilline’s school
+          <p style={{ color: `#696984`, fontSize: `min(2vw,1rem)`, margin: `0 auto`, textAlign: `left` }}>Skilline's school
             management software helps traditional and online schools manage scheduling, attendance, payments and virtual classrooms all
             in one secure cloud-based system.
           </p>
@@ -115,7 +117,7 @@ function App() {
         <img src={classRoom} style={{ marginTop: `14px`, marginBottom: `20px` }} />
       </div>
 
-      <p style={{ color: `#F48C06`, fontSize: `min(3.2vw,24px)`, fontWeight: `bold`, textAlign: `center`, paddingTop: `5vw`, margin: `1.5vw auto` }}>
+      <p style={{ color: `#F48C06`, fontSize: `min(3.2vw,24px)`, fontWeight: `bold`, textAlign: `center`, paddingTop: `3rem`, margin: `1.5vw auto` }}>
         <span style={{ color: `#2F327D` }}>Our</span> Features
       </p>
       <p style={{ color: `#696984`, fontSize: `min(2.4vw,1.2rem)`, width: `48vw`, margin: `0 auto`, textAlign: 'center' }}>
@@ -205,7 +207,7 @@ function App() {
 
       <Testimonial />
 
-      <p style={{ color: `#2F327D`, fontSize: `min(3.2vw,24px)`, textAlign: `center`, paddingTop: `5vw`, margin: `1.5vw auto`, fontWeight: `bold` }}>Latest News and Resources</p>
+      <p style={{ color: `#2F327D`, fontSize: `min(3.2vw,24px)`, textAlign: `center`, paddingTop: `3rem`, margin: `1.5vw auto`, fontWeight: `bold` }}>Latest News and Resources</p>
       <p style={{ color: `#696984`, fontSize: `min(2.6vw,1.2rem)`, width: `85vw`, margin: `0 auto`, textAlign: 'center', marginBottom: `20px` }}>
         See the developments that have occurred to Skillines in the world
       </p>
@@ -229,7 +231,7 @@ function App() {
               
               img={neWs3}
               category = {"NEWS"}
-              title = {"Zoom’s earliest investors are betting millions on a better Zoom for schools"}
+              title = {"Zoom's earliest investors are betting millions on a better Zoom for schools"}
               desc= {"Zoom was never created to be a consumer product. Nonetheless, the..."}
             />
             <News 
