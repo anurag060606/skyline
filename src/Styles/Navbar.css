@@ -57,6 +57,14 @@ button{
   top: 10px;
   left: 0px;
   cursor: pointer;
+  opacity: 0;
+  transform: rotate(-90deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.close-btn.visible {
+  opacity: 1;
+  transform: rotate(0deg);
 }
 
 @media (min-width: 1600px) {
@@ -93,6 +101,9 @@ button{
 
   a{
     font-size: 2.2vw;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
   }
 
   .hamburger {
@@ -100,7 +111,6 @@ button{
   }
 
   .navitems {
-    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -113,10 +123,50 @@ button{
     padding: 65px 20px 60px 25px;
     gap: 1.5rem;
     backdrop-filter: blur(24px);
+    
+    /* Initial hidden state */
+    transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+    
+    /* Smooth transition */
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                opacity 0.4s ease-in-out,
+                visibility 0.4s ease-in-out;
   }
 
   .navitems.show {
-    display: flex;
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navitems.show a {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .navitems.show a:nth-child(2) {
+    transition-delay: 0.1s;
+  }
+
+  .navitems.show a:nth-child(3) {
+    transition-delay: 0.2s;
+  }
+
+  .navitems.show a:nth-child(4) {
+    transition-delay: 0.3s;
+  }
+
+  .navitems.show a:nth-child(5) {
+    transition-delay: 0.4s;
+  }
+
+  .navitems.show .linklogin,
+  .navitems.show .linksignup,
+  .navitems.show .login,
+  .navitems.show .signup {
+    transition-delay: 0.5s;
   }
 
   .close-btn {
@@ -129,17 +179,41 @@ button{
     cursor: pointer;
   }
 
+  .navitems.show .close-btn {
+    opacity: 1;
+    transform: rotate(0deg);
+    transition-delay: 0.2s;
+  }
+
   .login, .signup {
     width: 100px;
     height: 40px;
     font-size: 1rem;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
   }
 
-  .link-login, .link-signup {
+  .navitems.show .login,
+  .navitems.show .signup {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .linklogin, .linksignup {
     text-decoration: none;
     font-size: 1.2rem;
     padding: 10px 20px;
     border-radius: 32px;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  }
+
+  .navitems.show .linklogin,
+  .navitems.show .linksignup {
+    opacity: 1;
+    transform: translateX(0);
   }
 
   img{
