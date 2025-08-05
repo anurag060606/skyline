@@ -7,21 +7,28 @@ import { MdClose } from "react-icons/md";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleMenuToggle = () => {
+    setIsOpen(prev => !prev);
+  };
+
   return (
     <nav>
       <img src={loGo} alt="Logo" />
 
       {/* Only show hamburger when nav is closed */}
       {!isOpen && (
-        <div className="hamburger" onClick={() => setIsOpen(true)}>
+        <div className="hamburger" onClick={handleMenuToggle}>
           <GiHamburgerMenu color="#252641" />
         </div>
       )}
 
       <div className={`navitems ${isOpen ? "show" : ""}`}>
         {isOpen && (
-          <button className="close-btn" onClick={() => setIsOpen(false)}>
-            <MdClose size={24} color="#252641"  />
+          <button 
+            className={`close-btn ${isOpen ? 'visible' : ''}`} 
+            onClick={handleMenuToggle}
+          >
+            <MdClose size={24} color="#252641" />
           </button>
         )}
         <a href="#">Home</a>
