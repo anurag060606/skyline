@@ -14,12 +14,19 @@
   @media (min-width: 1390px) {
     background-size: cover;
   }
+  @media (max-width: 768px) {
+    height: 70vh;
+    margin-bottom: 2rem;
+  }
 }
 
 .herosection{
   padding-left: 25px;
   @media (min-width: 700px) {
     padding-left: 40px;
+  }
+  @media (max-width: 768px) {
+    padding-top: 2rem;
   }
 }
 
@@ -30,6 +37,12 @@
   background-color: #F48C06;
   color:#FFFFFF;
   border-radius: 6vw;
+  @media (max-width: 768px) {
+    font-size: 3.5vw;
+    width: 28vw;
+    height: 10vw;
+    border-radius: 12vw;
+  }
 }
 
 @media (min-width:860px){
@@ -40,13 +53,17 @@
   }
 }
 
-
 .tagline{
   font-size: 3vw;
   font-weight: 700;
   color: #2F327D;
   width: 40vw;
   margin:0px;
+  @media (max-width: 768px) {
+    font-size: 7vw;
+    width: 80vw;
+    margin-bottom: 1rem;
+  }
 }
 
 .tagline span{
@@ -57,6 +74,19 @@
   font-size: 1.6vw;
   color: #464646;
   width: 35vw;
+  @media (max-width: 768px) {
+    font-size: 4vw;
+    width: 85vw;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Companies section with reduced spacing on mobile */
+.companies-section {
+  margin-top: 2rem;
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+  }
 }
 
 .logos{
@@ -64,6 +94,12 @@
   gap:3vw;
   justify-content:center;
   align-items: center;
+  margin-bottom: 3rem;
+  @media (max-width: 768px) {
+    margin-bottom: 2rem;
+    gap: 4vw;
+    flex-wrap: wrap;
+  }
 }
 
 .logos img{
@@ -71,6 +107,10 @@
   transform: translateY(-25%);
   @media (min-width:450px) {
     width: 9vw !important;
+  }
+  @media (max-width: 768px) {
+    width: 15vw !important;
+    transform: translateY(0);
   }
 }
 
@@ -82,7 +122,8 @@
   @media (max-width:768px) {
     flex-direction: column;
     align-items: center;
-    gap:8vw
+    gap:8vw;
+    margin-top: 3rem;
   }
 }
 
@@ -94,7 +135,8 @@
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
-    gap:8vw
+    gap:8vw;
+    margin-top: 3rem;
   }
 }
 
@@ -145,7 +187,8 @@
     align-items: center;
     margin: 0 auto;
     width:75vw;
-    gap:0vw
+    gap:0vw;
+    margin-top: 5rem !important;
   }
 }
 
@@ -278,4 +321,17 @@
   top: min(-3.8vw,20px);
   left:50%;
   transform: translateX(-50%);
+}
+
+/* Section spacing improvements for mobile */
+@media (max-width: 768px) {
+  .section-spacing {
+    margin-top: 3rem !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  /* Reduce spacing between sections */
+  p[style*="paddingTop"] {
+    padding-top: 3rem !important;
+  }
 }
